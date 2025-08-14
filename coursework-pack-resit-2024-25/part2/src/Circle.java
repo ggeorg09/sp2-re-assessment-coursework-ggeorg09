@@ -39,4 +39,18 @@ public class Circle extends GeometricObject implements Scalable {
         return radius; 
     }
 
+    
     /**
+     * Setting the circle radius 
+     * @param radius new radius to set
+     */
+    public void setRadius(double radius) { 
+        this.radius = radius; 
+    }
+
+    /**
+     * @return the diameter of the circle (2 * radius)
+     */
+    public double getDiameter() { 
+        return 2 * radius; 
+    }
