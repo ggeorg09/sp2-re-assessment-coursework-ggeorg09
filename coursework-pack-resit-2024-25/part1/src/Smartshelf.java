@@ -171,8 +171,17 @@ public class Smartshelf {
      *  null if this Smartshelf does not contain any Item objects
      */
     public Item greatestItem() {
-        // TO DO
+        // will show us the item with the greatest value
+    if (items.isEmpty()) {
         return null;
+    }
+    Item greatest = items.get(0);
+    for (Item i : items) {
+        if (i != null && i.compareTo(greatest) > 0) {
+            greatest = i;
+        }
+    }
+    return greatest;
     }
 
     /**
@@ -186,7 +195,7 @@ public class Smartshelf {
      *  whose weight is less than or equal to the specified method parameter
      */
     public Smartshelf makeNewSmartshelfWith(int maxItemWeightInGrammes) {
-        // TO DO
+        //
         return null;
     }
 
