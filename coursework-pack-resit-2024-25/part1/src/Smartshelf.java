@@ -11,7 +11,7 @@
  */
 public class Smartshelf {
 
-    // TO DO
+     private java.util.ArrayList<Item> items;
 
     /* Constructors */
 
@@ -19,7 +19,8 @@ public class Smartshelf {
      * Constructs a new Smartshelf without any Items.
      */
     public Smartshelf() {
-        // TO DO
+        // constructing Smartshelf without any Items
+          this.items = new java.util.ArrayList<Item>();
     }
 
     /**
