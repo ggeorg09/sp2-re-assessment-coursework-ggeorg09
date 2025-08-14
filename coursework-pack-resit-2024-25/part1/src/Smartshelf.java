@@ -128,9 +128,15 @@ public class Smartshelf {
      * @return the total weight of the Items in this Smartshelf.
      */
     public int totalWeightInGrammes() {
-        // TO DO
-        return 0;
+        // here we will get the total weight of the items in the smartshelf
+    int total = 0;
+    for (Item i : items) {
+        if (i != null) {
+            total += i.getWeight();
+        }
     }
+    return total;
+}
 
     /**
      * Returns the average weight in grammes of the (non-null) Items
