@@ -72,3 +72,24 @@ public class Circle extends GeometricObject implements Scalable {
     public double getPerimeter() { 
         return 2 * Math.PI * radius; 
     }
+
+
+
+    /**
+     * Scaling the circle by a factor where if the factor <= 0, radius remains the same.
+     * @param factor scaling factor
+     */
+    @Override
+    public void scale(double factor) {
+        if (factor > 0) radius *= factor;
+    }
+
+    /**
+     * Returning a string describing the circle including radius
+     * @return string representation of the circle
+     */
+    @Override
+    public String toString() {
+        return super.toString() + ", radius: " + radius;
+    }
+}
