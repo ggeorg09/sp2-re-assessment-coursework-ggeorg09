@@ -118,8 +118,8 @@ public class Smartshelf {
      * @return the number of non-null Items in this Smartshelf
      */
     public int numberOfItems() {
-        // TO DO
-        return 0;
+        // returns the number of not null items 
+         return this.items.size();
     }
 
     /**
