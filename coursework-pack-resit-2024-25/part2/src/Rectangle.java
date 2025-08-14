@@ -3,7 +3,7 @@
  *  of GeometricObject, it has a height and a width
  * @author Paul Nulty
  */
-public class Rectangle extends GeometricObject {
+public class Rectangle extends GeometricObject implements Scalable, Rotatable {
 	private double width;  // The width of a rectangle
 	private double height;  // The height of a rectangle
 
