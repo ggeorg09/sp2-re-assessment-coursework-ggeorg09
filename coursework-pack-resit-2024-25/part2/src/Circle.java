@@ -54,3 +54,21 @@ public class Circle extends GeometricObject implements Scalable {
     public double getDiameter() { 
         return 2 * radius; 
     }
+
+    /**
+     * Calculating the area of the circle
+     * @return area = π * radius^2
+     */
+    @Override
+    public double getArea() { 
+        return Math.PI * radius * radius; 
+    }
+
+    /**
+     * Calculate the circle perimeter 
+     * @return perimeter = 2 * π * radius
+     */
+    @Override
+    public double getPerimeter() { 
+        return 2 * Math.PI * radius; 
+    }
