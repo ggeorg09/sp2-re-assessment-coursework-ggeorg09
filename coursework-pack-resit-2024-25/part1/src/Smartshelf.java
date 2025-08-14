@@ -236,10 +236,22 @@ public class Smartshelf {
      */
     @Override
     public String toString() {
-        // TO DO
-        return null;
+        // string representation the smartshelf enclosed in square brackets 
+      StringBuilder sb = new StringBuilder();
+    sb.append("["); 
+    boolean first = true; 
+    for (Item i : items) {
+        if (i != null) {
+            if (!first) {
+                sb.append(", "); 
+            }
+            sb.append(i.toString()); 
+            first = false;
+        }
     }
-
+    sb.append("]"); 
+    return sb.toString();
+  }
     /* class methods */
 
     /**
