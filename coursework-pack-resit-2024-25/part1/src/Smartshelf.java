@@ -33,7 +33,14 @@ public class Smartshelf {
      *  constructed Smartshelf
      */
     public Smartshelf(Item[] items) {
-        // TO DO
+        // create smartshelf with non-null items from array
+         this.items = new java.util.ArrayList<Item>();
+        for (Item i : items) {
+            if (i != null) {
+                this.items.add(i);
+            }
+        }
+    
     }
 
     /* Modifiers */
@@ -46,8 +53,12 @@ public class Smartshelf {
      * @return true if e is not null, false otherwise
      */
     public boolean add(Item e) {
-        // TO DO
-        return false;
+        // add item to smartshelf if e is not null
+        if (e != null) {
+        this.items.add(e);
+        return true;
+    }
+    return false;
     }
 
     /**
