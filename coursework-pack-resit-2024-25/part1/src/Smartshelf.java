@@ -136,7 +136,7 @@ public class Smartshelf {
         }
     }
     return total;
-}
+    }
 
     /**
      * Returns the average weight in grammes of the (non-null) Items
@@ -153,8 +153,12 @@ public class Smartshelf {
      *  or -1.0 if there is no such Item.
      */
     public double averageWeightInGrammes() {
-        // TO DO
-        return 0.0;
+        // if is -1.0 there is no such item in the smartshelf
+    if (items.isEmpty()) {
+        return -1.0;
+    }
+    int total = totalWeightInGrammes();
+    return (double) total / items.size();
     }
 
     /**
