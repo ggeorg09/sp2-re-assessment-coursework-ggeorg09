@@ -195,10 +195,20 @@ public class Smartshelf {
      *  whose weight is less than or equal to the specified method parameter
      */
     public Smartshelf makeNewSmartshelfWith(int maxItemWeightInGrammes) {
-        //
-        return null;
+        //create a new smartshelf
+      Item[] filtered = new Item[items.size()];
+    int count = 0;
+    for (Item i : items) {
+        if (i != null && i.getWeightInGrammes() <= maxItemWeightInGrammes) {
+            filtered[count++] = i;
+        }
     }
-
+    Item[] result = new Item[count];
+    for (int j = 0; j < count; j++) {
+        result[j] = filtered[j];
+    }
+    return new Smartshelf(result);
+}
     /**
      * Returns a string representation of this Smartshelf. The string
      * representation consists of a list of the Smartshelf's contents,
