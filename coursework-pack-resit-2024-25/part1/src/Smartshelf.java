@@ -70,9 +70,19 @@ public class Smartshelf {
      *  false otherwise
      */
     public boolean addAll(Item[] items) {
-        // TO DO
+        // adds all not null items in items to the smartshelf
+  if (items == null) {
         return false;
     }
+    boolean added = false;
+    for (Item it : items) {
+        if (it != null) {
+            this.items.add(it);
+            added = true;
+        }
+    }
+    return added;
+}
 
     /**
      * Empties this Smartshelf to a Smartshelf that contains 0 Items.
