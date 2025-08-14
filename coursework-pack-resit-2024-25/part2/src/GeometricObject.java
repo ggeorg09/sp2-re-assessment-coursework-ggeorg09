@@ -72,6 +72,12 @@ public abstract class GeometricObject implements Comparable<GeometricObject>, Sc
 	// Abstract method getPerimeter
 	public abstract double getPerimeter();
 
+	//Comparing geometric objects based on their area
+	@Override
+    public int compareTo(GeometricObject other) {
+        return Double.compare(this.getArea(), other.getArea());
+    }
+
 	/** 
 	 * @return String return a string describing the GeometricObject
 	 */ 
