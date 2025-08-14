@@ -100,7 +100,15 @@ public class Rectangle extends GeometricObject implements Scalable, Rotatable {
     }
 
 
-
+   /**
+     * Swapping the width and height of the rectangle to rotates 90°  
+     */
+    @Override
+    public void rotate() {
+        double temp = width;
+        width = height;
+        height = temp;
+    }
 
 	
 	/** 
