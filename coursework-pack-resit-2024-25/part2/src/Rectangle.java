@@ -87,7 +87,21 @@ public class Rectangle extends GeometricObject implements Scalable, Rotatable {
 	public double getPerimeter() {
 		return 2 * (width + height);
 	}
-	
+	/** 	
+	 * Scales the rectangle by a positive factor where if the factor <= 0, width and height remain the same.
+     * @param factor scaling factor
+     */
+    @Override
+    public void scale(double factor) {
+        if (factor > 0) {
+            width *= factor;
+            height *= factor;
+        }
+    }
+
+
+
+
 	
 	/** 
 	 * @return String simple string showing properties of the rectangle
