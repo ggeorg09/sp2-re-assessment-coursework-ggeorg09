@@ -275,7 +275,19 @@ public class Smartshelf {
      *  reference in Smartshelfs
      */
     public static Smartshelf heaviestSmartshelf(Smartshelf[] Smartshelfs) {
-        // TO DO
-        return null;
+      //highest total weight in all smartshelfs
+      Smartshelf heaviestShelf = null; 
+      int maxWeight = -1;         
+    
+    for (Smartshelf s : Smartshelfs) { 
+        if (s != null) {               
+            int weight = s.totalWeightInGrammes(); 
+            if (weight > maxWeight) {   
+                maxWeight = weight;     
+                heaviestShelf  = s;           
+            }
+        }
+    }
+    return heaviestShelf;
     }
 }
