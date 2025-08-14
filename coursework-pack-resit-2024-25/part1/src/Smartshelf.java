@@ -88,7 +88,8 @@ public class Smartshelf {
      * Empties this Smartshelf to a Smartshelf that contains 0 Items.
      */
     public void empty() {
-        // TO DO
+        // empties the smartshelf
+            this.items.clear();
     }
 
     /**
