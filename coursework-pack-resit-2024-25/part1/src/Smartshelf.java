@@ -82,7 +82,7 @@ public class Smartshelf {
         }
     }
     return added;
-}
+    }
 
     /**
      * Empties this Smartshelf to a Smartshelf that contains 0 Items.
@@ -101,7 +101,13 @@ public class Smartshelf {
      *  Items that are kept
      */
     public void keepOnlyItemsWith(int maxItemWeightInGrammes) {
-        // TO DO
+        // If an item's weight is greater than max allowed will be removed
+         for (int i = 0; i < items.size(); i++) {
+        if (items.get(i).getWeight() > maxItemWeightInGrammes) {
+            items.remove(i);
+            i--; 
+        }
+    }
     }
 
     /* Accessors */
