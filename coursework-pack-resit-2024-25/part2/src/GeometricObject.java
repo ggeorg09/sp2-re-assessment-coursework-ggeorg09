@@ -5,7 +5,9 @@
  */
 
 import java.util.Date;
-public abstract class GeometricObject {
+//adding scalable
+public abstract class GeometricObject implements Comparable<GeometricObject>, Scalable {
+
 	private String color; // The color
 	private boolean filled; // Filled (true for yes)
 	private Date dateCreated; // The date of creation
